@@ -32,12 +32,7 @@ a.icon-link:hover {
     color: #F9572E;
 }
 
-a.icon-link.contacts {
-    background-image: url("/img/icons/contacts.svg");
-}
-
 a.icon-link.scroll-link {
-    background-image: url("/img/icons/down-arrows.svg");
     transition: all 0.2s ease-in-out;
     background-size: 41px 30px;
     padding-left: 53px;
@@ -46,4 +41,16 @@ a.icon-link.scroll-link {
 a.icon-link.scroll-link:hover {
     background-size: 33px 30px;
     background-position: 5px center;
+}
+
+.text-pair-block.border-all {
+    text-align: center;
+}
+
+.border-up {
+    border-top: 4px solid #63D2C1;
+}
+
+.border-all {
+    border: 4px solid #63D2C1;
 }

@@ -5,9 +5,9 @@
         private $menu = [];
         private static $css = "css/header.css";
 
-        public function addNavItem($class, $innerText, $href)
+        public function addNavItem($class, $innerText, $href, $srcImg)
         {
-            $namItem = [$class, [$innerText, $href]];
+            $namItem = [$class, [$innerText, $href, $srcImg]];
             array_push($this->menu, $namItem);
         }
 
@@ -17,8 +17,8 @@
             $html = '<header id="main-header">';
             $html .= '<img id="logotype" src="' . $this->logo_url . '"/>';
             $html .= '<ul>';
-            foreach($this->menu as [$class, [$innerText, $href]]) {
-                $html .= '<li>' . new IconLink($class, $href, $innerText) . '</li>';
+            foreach($this->menu as [$class, [$innerText, $href, $srcImg]]) {
+                $html .= '<li>' . new IconLink($class, $href, $innerText, $srcImg) . '</li>';
             }
             $html .= "</ul></header>";
             return $html;
