@@ -1,0 +1,71 @@
+#main-screen {
+    height: 100vh;
+    padding-left: 110px;
+    padding-right: 20px;
+}
+
+.main-info {
+    height: 100%;
+    padding-top: 308px;
+    width: calc(50% - 110px);
+    position: relative;
+}
+
+div.main-info a {
+    color: #F9572E;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 48px;
+}
+
+div.main-info p{
+    margin-top: 27px;
+    margin-bottom: 44px;
+}
+
+div.main-info span{
+    margin-left: 31px;
+}
+
+
+
+#main-screen aside {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: calc(50% - 20px);
+    height: calc(100% - 40px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #F9572E;
+
+    background-image: url(/img/backgrounds/Bitmap.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.play-btn {
+    padding: 20px;
+}
+
+.play-btn p {
+    margin-top: 20px;
+}
+
+.play-btn .play-scale-element {
+    transition: all 0.2s ease-in-out;
+    transform-origin: 50% 50%;
+}
+
+.play-btn:hover .play-scale-element {
+    transform: scale(1.2);
+    
+}
+
+
+

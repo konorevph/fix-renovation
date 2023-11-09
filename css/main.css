@@ -1,0 +1,19 @@
+@font-face {
+    font-family: MullerMedium;
+    src: url(/fonts/Muller/MullerMedium.ttf);
+}
+
+@font-face {
+    font-family: MullerRegular;
+    src: url(/fonts/Muller/MullerRegular.ttf);
+}
+
+* {
+    font-family: MullerRegular;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 64px;
+    font-family: MullerMedium;
+}

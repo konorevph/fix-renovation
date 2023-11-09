@@ -1,0 +1,49 @@
+.main-button {
+    width: 260px;
+    height: 51px;
+    background-color: #F9572E;
+    transition: background-color 0.1s ease-in;
+    color: #FFFFFF;
+    border-radius: 50px;
+    filter: drop-shadow(0px 7px 15px rgba(249, 87, 46, 0.60));
+}
+
+.main-button:hover {
+    background-color: #FF7B59;
+}
+
+a.icon-link {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 31px;
+
+    color: black;
+    transition: color 0.2s ease-in-out;
+
+    background-image: url("/img/icons/menu-li-tmp.svg");
+
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: left center;
+
+}
+
+a.icon-link:hover {
+    color: #F9572E;
+}
+
+a.icon-link.contacts {
+    background-image: url("/img/icons/contacts.svg");
+}
+
+a.icon-link.scroll-link {
+    background-image: url("/img/icons/down-arrows.svg");
+    transition: all 0.2s ease-in-out;
+    background-size: 41px 30px;
+    padding-left: 53px;
+}
+
+a.icon-link.scroll-link:hover {
+    background-size: 33px 30px;
+    background-position: 5px center;
+}
