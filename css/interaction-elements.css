@@ -47,6 +47,14 @@ a.icon-link.scroll-link:hover {
     text-align: center;
 }
 
+.text-pair-block h2 {
+    margin-bottom: 8px;
+}
+
+.text-pair-block h3 {
+    margin-bottom: 12px;
+}
+
 .border-up {
     border-top: 4px solid #63D2C1;
 }

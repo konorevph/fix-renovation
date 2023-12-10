@@ -3,6 +3,7 @@
     require_once("components/interaction-elements.php");
     require_once("components/slider.php");
     require_once("components/form.php");
+    require_once("components/footer.php");
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +22,7 @@
         InteractionElements::linkCss();
         ImgSlider_1::linkCss();
         MainForm::linkCss();
+        Footer::linkCss();
     ?>
 
 </head>
@@ -28,7 +30,6 @@
 <body>
     <?php
         $header = new Header();
-        $header->addNavItem("about-as", "О нас", "/#", "");
         $header->addNavItem("contacts", "Контакты", "/#", "/img/icons/contacts.svg");
         echo ($header);
     ?>
@@ -59,8 +60,8 @@
         $slider = new ImgSlider_1();
         $slider->addHeader("3 стиля интерьера", "Скандинавский, классический и эко-стиль");
         $slider->addItem("", "/img/interiors/slider_1.jpg", "/img/interiors/slider_1@2x.jpg", "/img/interiors/slider_1@3x.jpg", "Кафельная плитка<br>в ванной комнате<br>в скандинавском стиле");
-        $slider->addItem("", "/img/interiors/slider_2.jpg", "/img/interiors/slider_2@2x.jpg", "/img/interiors/slider_2@3x.jpg", "some text");
-        $slider->addItem("", "/img/interiors/slider_3.jpg", "/img/interiors/slider_3@2x.jpg", "/img/interiors/slider_3@3x.jpg", "some text");
+        $slider->addItem("", "/img/interiors/slider_2.jpg", "/img/interiors/slider_2@2x.jpg", "/img/interiors/slider_2@3x.jpg", "Кафельная плитка<br>в ванной комнате<br>в скандинавском стиле");
+        $slider->addItem("", "/img/interiors/slider_3.jpg", "/img/interiors/slider_3@2x.jpg", "/img/interiors/slider_3@3x.jpg", "Кафельная плитка<br>в ванной комнате<br>в скандинавском стиле");
         echo $slider;
     ?>
 
@@ -71,8 +72,24 @@
             $form->addInput("mail", "E-mail адрес*", "text", true);
             $form->addInput("tel", "Телефон", "text", false);
             $form->setBtnText("Подписаться");
+            $form->setSpetialOffer("Первым 10 клиентам стальная<br>входная дверь в подарок", "/img/icons/door.svg");
             $form->setSignature("* Обязательные для заполнения поля", "/#", "Политика конфиденциальности");
             echo $form;
+        ?>
+    </section>
+
+    <section id="">
+        <?php
+            $footer = new Footer();
+            $footer->addSocialNetwork("/img/icons/facebook.svg", "/#");
+            $footer->addSocialNetwork("/img/icons/vk.svg", "/#");
+            $footer->addSocialNetwork("/img/icons/instagram.svg", "/#");
+            $footer->setHeading("Следите за нашим развитием");
+            $footer->setParagraph("Подпишитесь на наши аккаунты в соц. сетях, знакомьтесь<br>с нашими проектами и тем, что нас вдохновляет");
+            $footer->setPhoneNumber('+7 (812) 903-54-45');
+            $footer->setAddress('Ул. Галерная, д 55,');
+            $footer->setMail('9035445@gmail.com');
+            echo $footer;
         ?>
     </section>
 </body>
