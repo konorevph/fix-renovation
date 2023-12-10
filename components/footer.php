@@ -71,7 +71,7 @@
                     {
                         case 'number':
                             {
-                                $html .= new IconLink('phone', '/#', $value, '/img/icons/contacts.svg');
+                                $html .= new IconLink('phone', '/#', $value, 'img/icons/contacts.svg');
                                 break;
                             }
                         case 'address':
@@ -81,7 +81,7 @@
                             }
                         case 'mail':
                             {
-                                $html .= new IconLink('mail', '/#', $value, '/img/icons/message.svg');
+                                $html .= new IconLink('mail', '/#', $value, 'img/icons/message.svg');
                                 break;
                             }
                     }
