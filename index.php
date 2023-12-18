@@ -43,7 +43,7 @@
         <aside>
             <button class="play-btn">
                 <?php include('img/icons/play.svg'); ?>
-                <p>Смотреть видео</p>
+                Смотреть видео
             </button>
         </aside>
     </section>
@@ -92,6 +92,7 @@
             echo $footer;
         ?>
     </section>
+
+    <?php ImgSlider_1::linkJs(); ?>
 </body>
-<?php ImgSlider_1::linkJs(); ?>
 </html>

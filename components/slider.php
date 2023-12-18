@@ -69,6 +69,7 @@ class ImgSlider_1
     public static function linkJs()
     {
         echo '<script src="'.self::$js.'"></script>';
+        '<script src="myscripts.js"></script>';
     }
 }
 ?>
