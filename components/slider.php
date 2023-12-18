@@ -51,7 +51,7 @@ class ImgSlider_1
                 .'</li>';
 
         $html .= "</ul>";
-        $html .= '<ul class="next-prev-btns"><li><button id="prev"><img src="img/icons/arrow_left.svg"/></button></li><li><button id="next"><img src="img/icons/arrow_right.svg"/></button></li></ul>';
+        $html .= '<ul class="next-prev-btns"><li><button id="prev"><img src="img/icons/arrow_left.svg" alt="previous"/></button></li><li><button id="next"><img src="img/icons/arrow_right.svg" alt="next"/></button></li></ul>';
         $html .= "</div></section>";
         return $html;
     }

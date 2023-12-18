@@ -15,7 +15,7 @@
         {
             
             $html = '<header id="main-header">';
-            $html .= '<img id="logotype" src="' . $this->logo_url . '"/>';
+            $html .= '<img id="logotype" src="' . $this->logo_url . '" alt="logotype"/>';
             $html .= '<ul>';
             foreach($this->menu as [$class, [$innerText, $href, $srcImg]]) {
                 $html .= '<li>' . new IconLink($class, $href, $innerText, $srcImg) . '</li>';

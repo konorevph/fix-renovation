@@ -46,7 +46,7 @@
                 $html .= '<ul class="social-network">';
                 foreach ($this->socialNetworks as $socialNetwork)
                 {
-                    $html .= '<li><a href="'.$socialNetwork['link'].'"><img src="'.$socialNetwork['img'].'"/></a></li>';
+                    $html .= '<li><a href="'.$socialNetwork['link'].'"><img src="'.$socialNetwork['img'].'" alt="SN-icon"/></a></li>';
                 }
                 $html .= '</ul>';
             }

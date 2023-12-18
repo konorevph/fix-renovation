@@ -42,14 +42,14 @@
             if (!empty($this->specialOffer))
             {
                 $html .= '<div class="special-offer">
-                    <img src="'.$this->specialOffer['img'].'"/>
+                    <img src="'.$this->specialOffer['img'].'" alt="door"/>
                     <p>'.$this->specialOffer['text'].'</p>
                     </div>';
             }
             foreach ($this->inputs as [$name, $placeholder, $type, $required])
             {
                 $html .= '<input name="'.$name.'" placeholder="'.$placeholder.'"';
-                if ($type != "") $html .= ' type=""' . $type;
+                if ($type != "") $html .= ' type="' . $type . '"';
                 if ($required) $html .= ' required';
                 $html .= '/>';
             }

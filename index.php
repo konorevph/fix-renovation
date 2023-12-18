@@ -78,7 +78,7 @@
         ?>
     </section>
 
-    <section id="">
+    <section>
         <?php
             $footer = new Footer();
             $footer->addSocialNetwork("img/icons/facebook.svg", "/#");
