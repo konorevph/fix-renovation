@@ -1,11 +1,11 @@
 @font-face {
     font-family: MullerMedium;
-    src: url(/fonts/Muller/MullerMedium.ttf);
+    src: url(../fonts/Muller/MullerMedium.ttf);
 }
 
 @font-face {
     font-family: MullerRegular;
-    src: url(/fonts/Muller/MullerRegular.ttf);
+    src: url(../fonts/Muller/MullerRegular.ttf);
 }
 
 * {
@@ -21,6 +21,7 @@ h1 {
     font-size: 64px;
 }
 
+legend,
 h2 {
     font-size: 40px;
 }

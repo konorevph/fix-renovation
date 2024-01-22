@@ -1,7 +1,7 @@
 <?php
     class MainForm
     {
-        private $method, $class = "main-form", $action, $name, $inputs = [], $btntext, $par, $linkHref, $linkText; 
+        private $method, $class = "main-form", $action, $name, $inputs = [], $btntext, $par, $linkHref, $linkText, $specialOffer = []; 
         private static $css = "css/form.css", $js = "js/form.js";
 
         public function __construct($method, $action, $name)
@@ -29,14 +29,27 @@
             $this->linkText = $linkText;
         }
 
+        public function setSpetialOffer($text, $img)
+        {
+            $this->specialOffer['text'] = $text;
+            $this->specialOffer['img'] = $img;
+        }
+
         public function __toString()
         {
-            $html = '<form class="'.$this->class.'">';
-            $html .= $this->name != "" ? '<h2>'.$this->name.'</h2>' : "";
+            $html = '<form class="'.$this->class.'"><fieldset>';
+            $html .= $this->name != "" ? '<legend>'.$this->name.'</legend>' : "";
+            if (!empty($this->specialOffer))
+            {
+                $html .= '<div class="special-offer">
+                    <img src="'.$this->specialOffer['img'].'" alt="door"/>
+                    <p>'.$this->specialOffer['text'].'</p>
+                    </div>';
+            }
             foreach ($this->inputs as [$name, $placeholder, $type, $required])
             {
                 $html .= '<input name="'.$name.'" placeholder="'.$placeholder.'"';
-                if ($type != "") $html .= ' type=""' . $type;
+                if ($type != "") $html .= ' type="' . $type . '"';
                 if ($required) $html .= ' required';
                 $html .= '/>';
             }
@@ -45,7 +58,7 @@
             $html .= $btn;
             if ($this->par != "") $html .= '<p>' . $this->par . '</p>';
             if ($this->linkHref != "") $html .= '<a href="'.$this->linkHref.'">' . $this->linkText . '</a>';
-            $html .= '</form>';
+            $html .= '</fieldset></form>';
             return $html;
         }
 
